@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.Deployment.Application;
+
+namespace Anti_Cheat
+{
+
+    public partial class Form1 : Form
+    {
+        string message = "Process Found\nWould you like to terminate process?";
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Terminating...";
+            progressBar1.Value = 100;
+            Process.GetProcessesByName(textBox1.Text);
+            Process[] pname = Process.GetProcessesByName(textBox1.Text);
+            if (pname.Length == 0)
+            {
+                MessageBox.Show("Process Not Found");
+            }
+            else
+            {               
+                DialogResult r = MessageBox.Show(message, "confirm", MessageBoxButtons.YesNo);
+
+                if (r == System.Windows.Forms.DialogResult.Yes)
+                {
+                    foreach (var p in Process.GetProcessesByName(textBox1.Text))
+                    {
+                        p.Kill();
+                    }
+
+                }
+
+            }
+
+            progressBar1.Value = 0;
+            lblStatus.Text = "Ready";
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            progressBar1.Visible = true;
+        }
+    }
+}
