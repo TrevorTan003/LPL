@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.Deployment.Application;
+
+namespace Anti_Cheat
+{
+
+    public partial class Form1 : Form
+    {
+        string message = "Process Found\nWould you like to terminate process?";
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+
+        private void btnScan_Click(object sender, EventArgs e)
+        {
+            //Clicked button
+            lblStatus.Text = "Scanning";
+            lblStatus.ForeColor = System.Drawing.Color.Red;
+            progressBar1.Value = 100;
+
+            //Detects the input in the textbox, the "process" will be declared as an array
+            Process.GetProcessesByName(txtInput.Text);
+            Process[] findProcess = Process.GetProcessesByName(txtInput.Text);
+
+            //Logical statements
+            if (findProcess.Length == 0)
+            {
+                MessageBox.Show("Process Not Found");
+            }
+
+            else
+            {
+                lblStatus.Text = "Scanning";
+                lblStatus.ForeColor = System.Drawing.Color.Red;
+                DialogResult killProcess = MessageBox.Show("Process Found\nWould you like to terminate the process: "+txtInput.Text+"?","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
+
+                if (killProcess == DialogResult.Yes)
+                {
+                    foreach (var p in Process.GetProcessesByName(txtInput.Text))
+                    {
+                        p.Kill();
+                    }
+                }
+            }
+
+            lblStatus.Text = "Ready To Scan";
+            lblStatus.ForeColor = System.Drawing.Color.Green;
+            txtInput.Text = "";
+            progressBar1.Value = 0;
+        }
+
+        private void lblStatus_Click(object sender, EventArgs e)
+        {
+            //Haven't clicked button
+            lblStatus.Text = "Ready To Scan";
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            //Display Progress
+            progressBar1.Visible = true;
+
+          
+        }
+
+        private void Process_Exited(object sender, EventArgs e)
+        {
+
+        }
+
+        public void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void lblHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+    }
+}
