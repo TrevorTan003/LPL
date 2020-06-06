@@ -1,0 +1,12 @@
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\bin\Debug\anticheatsoftware.exe.config
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\bin\Debug\anticheatsoftware.exe
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\bin\Debug\anticheatsoftware.pdb
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.csprojAssemblyReference.cache
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.Form1.resources
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.Properties.Resources.resources
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.csproj.GenerateResource.cache
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.csproj.CoreCompileInputs.cache
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.exe
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.pdb
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.Form2.resources
+D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.Form3.resources
