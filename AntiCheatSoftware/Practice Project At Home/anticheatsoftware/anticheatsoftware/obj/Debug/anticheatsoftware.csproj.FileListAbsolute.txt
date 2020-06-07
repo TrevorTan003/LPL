@@ -9,4 +9,3 @@ D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debu
 D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.exe
 D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.pdb
 D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.Form2.resources
-D:\School\L3 TPI\Anticheat practice\anticheatsoftware\anticheatsoftware\obj\Debug\anticheatsoftware.Form3.resources

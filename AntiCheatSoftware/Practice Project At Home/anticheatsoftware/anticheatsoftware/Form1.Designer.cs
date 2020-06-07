@@ -105,6 +105,7 @@
             this.Controls.Add(this.txtProcess);
             this.Controls.Add(this.btnClick);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";

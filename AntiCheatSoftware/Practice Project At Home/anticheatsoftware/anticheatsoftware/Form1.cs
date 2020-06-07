@@ -19,6 +19,7 @@ namespace anticheatsoftware
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -112,7 +113,10 @@ namespace anticheatsoftware
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyData == (Keys.F10))
+            {
 
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,10 +124,15 @@ namespace anticheatsoftware
             Application.Exit();
         }
 
+        public static int formStatus = 0;
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            form2.Show();
+            if (formStatus == 0)
+            {
+                form2.Show();
+                formStatus += 1;
+            }
         }
     }
 }

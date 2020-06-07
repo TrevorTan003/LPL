@@ -64,15 +64,24 @@ namespace anticheatsoftware
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            ListViewItem foundItem =
+        viewProcess.FindItemWithText(textBox1.Text, false, 0, true);
+            if (foundItem != null)
+            {
+                viewProcess.TopItem = foundItem;
+            }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.viewProcess.Refresh();
+            listProcess();
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1.formStatus -= 1;
         }
     }
 }
