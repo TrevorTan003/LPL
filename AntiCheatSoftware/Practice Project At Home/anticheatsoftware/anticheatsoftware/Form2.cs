@@ -53,6 +53,7 @@ namespace anticheatsoftware
                     ToTextBox = processId;
 
                 Form1 form1 = new Form1();
+                form1.Hide();
                 form1.Show();
             }
         }
