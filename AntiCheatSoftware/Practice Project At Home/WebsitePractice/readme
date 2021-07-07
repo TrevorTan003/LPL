@@ -1,0 +1,9 @@
+Practice on the web app using ASP.NET Core (MVC):
+Things I did:
+     • Connected to database
+     • Added Identity (Login and Register) by adding scaffolded items
+     • Roles (Created Roles and can edit the roles but still need to add the delete feature)
+     • Bad html
+     
+I still need to add authorization so that the role management controller and views are not accessible to other roles (i.e [Authorize(Roles = "Admin")])
+so only users with the "Admin" role can access them and more.
